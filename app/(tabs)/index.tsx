@@ -1,75 +1,100 @@
-import { Image } from 'expo-image';
-import { Platform, StyleSheet } from 'react-native';
 
-import { HelloWave } from '@/components/HelloWave';
-import ParallaxScrollView from '@/components/ParallaxScrollView';
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
+import { Platform, StyleSheet, View, Text, Image } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { Link } from "expo-router";
+import { ScrollView } from 'react-native-gesture-handler';
+
 
 export default function HomeScreen() {
+
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
-      headerImage={
-        <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
-        />
-      }>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
-        <HelloWave />
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-        <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({
-              ios: 'cmd + d',
-              android: 'cmd + m',
-              web: 'F12',
-            })}
-          </ThemedText>{' '}
-          to open developer tools.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-        <ThemedText>
-          {`Tap the Explore tab to learn more about what's included in this starter app.`}
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
-          {`When you're ready, run `}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
-        </ThemedText>
-      </ThemedView>
-    </ParallaxScrollView>
+    <SafeAreaView style = { styles.container }>
+
+      <Image source = {require("../../assets/images/cat.gif")} style = { styles.gif } 
+        alt = "gatinho descobriu que precisa programar em java para to get money"></Image>
+
+      <ScrollView contentContainerStyle = {{ height: "100%", justifyContent: "center", marginVertical: "12%", marginHorizontal: "5%" }}>
+
+        <View>
+          <Text style = { styles.title }>Bem-vindo...</Text>
+          <Text style = { styles.subTitle1 }>Este é um simples aplicativo de mudança de propriedades de uma tela.</Text>
+          <Text style = { styles.subTitle2 }>Não é nada que te impressione, juro. Eu só preciso de nota.</Text>
+        </View>
+
+        <View style = { styles.assets }>
+          <Text style = {[{ textAlign: "center", marginBottom: 8, }, styles.generalText]}>Aqui, você pode:</Text>
+          <Text style = { styles.generalText }>- Mudar o texto usando o botão Definir Texto.</Text>
+          <Text style = { styles.generalText }>- Mudar a cor de fundo do aplicativo.</Text>
+          <Text style = { styles.generalText }>- Mudar a cor das letras.</Text>
+        </View>
+
+        <View style = { styles.linkContainer }>
+          <Link href = "/properties" style = { styles.link }>Próximo</Link>
+        </View>
+
+      </ScrollView>
+
+    </SafeAreaView>
   );
+
 }
 
+
 const styles = StyleSheet.create({
-  titleContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
+  
+  container: {
+    backgroundColor: "#5d5d5d",
+    width: "100%",
+    height: "100%",    
   },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
+
+  gif: {
+    height: 300,
+    width: "100%",
   },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
+
+  title: {
+    color: "#FFFFFF",
+    fontSize: 45,
+    fontWeight: "bold",
+    textAlign: "center",
   },
+
+  subTitle1: {
+    color: "#FFFFFF",
+    textAlign: "center",
+    fontSize: 20,
+    marginVertical: 10,
+  },
+
+  subTitle2: {
+    color: "#FFFFFF",
+    textAlign: "center",
+    opacity: 0.5
+  },
+
+  generalText: {
+    color: "#FFFFFF",
+    fontSize: 15,
+  },
+
+  assets: {
+    marginTop: 10,
+    marginBottom: 40,
+  },
+
+  linkContainer: {
+    justifyContent: "center",
+    width: "100%",
+    paddingBottom: "15%",
+  },
+
+  link: {
+    position: "absolute",    
+    right: 45,
+    fontSize: 23,
+    color: "#c8c8c8",
+    textDecorationLine: "underline",
+  }
+
 });
