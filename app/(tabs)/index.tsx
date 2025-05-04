@@ -11,21 +11,20 @@ export default function HomeScreen() {
     <SafeAreaView style = { styles.container }>
 
       <Image source = {require("../../assets/images/cat.gif")} style = { styles.gif } 
-        alt = "gatinho descobriu que precisa programar em java para to get money"></Image>
+        alt = "gatinho descobriu que precisa programar em java para to get money (mentira, eu amo java)"></Image>
 
       <ScrollView contentContainerStyle = {{ height: "100%", justifyContent: "center", marginVertical: "12%", marginHorizontal: "5%" }}>
 
         <View>
           <Text style = { styles.title }>Bem-vindo...</Text>
           <Text style = { styles.subTitle1 }>Este é um simples aplicativo de mudança de propriedades de uma tela.</Text>
-          <Text style = { styles.subTitle2 }>Não é nada que te impressione, juro. Eu só preciso de nota.</Text>
+          <Text style = { styles.subTitle2 }>Não é nada que te impressione, juro.</Text>
         </View>
 
         <View style = { styles.assets }>
           <Text style = {[{ textAlign: "center", marginBottom: 8, }, styles.generalText]}>Aqui, você pode:</Text>
           <Text style = { styles.generalText }>- Mudar o texto usando o botão Definir Texto.</Text>
-          <Text style = { styles.generalText }>- Mudar a cor de fundo do aplicativo.</Text>
-          <Text style = { styles.generalText }>- Mudar a cor das letras.</Text>
+          <Text style = { styles.generalText }>- Mudar a cor de fundo do aplicativo.</Text>          
         </View>
 
         <View style = { styles.linkContainer }>
