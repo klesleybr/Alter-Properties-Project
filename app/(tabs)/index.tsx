@@ -1,9 +1,5 @@
-
-import { Platform, StyleSheet, View, Text, Image } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { StyleSheet, View, Text, Image, SafeAreaView, ScrollView } from 'react-native';
 import { Link } from "expo-router";
-import { ScrollView } from 'react-native-gesture-handler';
-
 
 export default function HomeScreen() {
 
@@ -11,8 +7,9 @@ export default function HomeScreen() {
     <SafeAreaView style = { styles.container }>
 
       <Image source = {require("../../assets/images/cat.gif")} style = { styles.gif } 
-        alt = "gatinho descobriu que precisa programar em java para to get money (mentira, eu amo java)"></Image>
-
+        alt = "gatinho descobriu que precisa programar em java para to get money (mentira, eu amo java)">
+      </Image>
+            
       <ScrollView contentContainerStyle = {{ height: "100%", justifyContent: "center", marginVertical: "12%", marginHorizontal: "5%" }}>
 
         <View>
@@ -31,8 +28,8 @@ export default function HomeScreen() {
           <Link href = "/properties" style = { styles.link }>Próximo</Link>
         </View>
 
-      </ScrollView>
-
+        </ScrollView>
+          
     </SafeAreaView>
   );
 

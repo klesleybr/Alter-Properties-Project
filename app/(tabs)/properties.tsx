@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { Button, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
-import { FlatList } from "react-native-gesture-handler";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { Button, StyleSheet, Text, TextInput, 
+    TouchableOpacity, View, FlatList, SafeAreaView } from "react-native";
 
 const colors = [
     {
@@ -41,7 +40,7 @@ const colors = [
 
             textInput: {
                 backgroundColor: "#d6d6d6",                
-                width: "90%",
+                width: "80%",
                 borderRadius: 10,
                 height: 35,
                 paddingHorizontal: 15,
@@ -103,7 +102,7 @@ const colors = [
 
             textInput: {
                 backgroundColor: "#FFF",
-                width: "90%",
+                width: "80%",
                 borderRadius: 10,
                 height: 35,
                 paddingHorizontal: 15,
@@ -171,7 +170,7 @@ const colors = [
 
             textInput: {
                 backgroundColor: "#c7f5ff",
-                width: "90%",
+                width: "80%",
                 borderRadius: 10,
                 height: 35,
                 paddingHorizontal: 15,                
@@ -237,7 +236,7 @@ const colors = [
 
             textInput: {
                 backgroundColor: "#a8fc86",
-                width: "90%",
+                width: "80%",
                 borderRadius: 10,
                 height: 35,
                 paddingHorizontal: 15,
@@ -299,7 +298,7 @@ const colors = [
 
             textInput: {
                 backgroundColor: "#ffef89",
-                width: "90%",
+                width: "80%",
                 borderRadius: 10,
                 height: 35,
                 paddingHorizontal: 15,
@@ -361,7 +360,7 @@ const colors = [
 
             textInput: {
                 backgroundColor: "#ffc376",
-                width: "90%",
+                width: "80%",
                 borderRadius: 10,
                 height: 35,
                 paddingHorizontal: 15,
@@ -418,7 +417,7 @@ export default function Properties() {
                                         </TouchableOpacity>}>                    
                 </FlatList>
             </View>            
-
+            
         </SafeAreaView>
 
     );
