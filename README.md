@@ -1,50 +1,37 @@
-# Welcome to your Expo app 👋
+# Um simples aplicativo de mudança de propriedades de uma tela...
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Este aplicativo foi produzido com fins puramente pedagógicos. Sua construção é útil no aprendizado de estilizações e roteamento no desenvolvimento com React Native.
 
-## Get started
+## Instruções de uso
 
-1. Install dependencies
+1. Clone o projeto na sua máquina:
+   
+   ```>> git clone git@github.com:klesleybr/Alter-Properties-Project.git```
 
-   ```bash
-   npm install
-   ```
 
-2. Start the app
+2. Instale as dependências necessárias:
 
-   ```bash
-   npx expo start
-   ```
+   ```>> npm install```
 
-In the output, you'll find options to open the app in a
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+3. Execute usando o Expo:
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+   ```>> npx expo start```
 
-## Get a fresh project
 
-When you're ready, run:
 
-```bash
-npm run reset-project
-```
+# Printscreens
+1. Tela inicial (Home)
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+![tela inicial do aplicativo](/screens/Screen%20Shot%202025-05-12%20at%2017.41.39.png)
 
-## Learn more
+2. Tela de mudança de propriedades em modo Dark
 
-To learn more about developing your project with Expo, look at the following resources:
+![tela para alterar as propriedades da aplicação (dark)](/screens/Screen%20Shot%202025-05-12%20at%2017.42.17.png)
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+3. Tela de mudança de propriedades em modo Light
 
-## Join the community
+![tela para alterar as propriedades da aplicação (light)](/screens/Screen%20Shot%202025-05-12%20at%2017.43.08.png)
 
-Join our community of developers creating universal apps.
+(A referência utilizada para os prints de tela foi o **Galaxy S20 Ultra Android 11**)
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
